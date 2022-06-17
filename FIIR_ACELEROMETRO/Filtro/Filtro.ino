@@ -1,5 +1,5 @@
 
-// Teste dos Paramêtros dos Filtros Butterworth (Frequência de Corte = 3.7Hz , Frequência de amostragem = 1000Hz , Amáx Pass_Band = 0.7dB , Amin Reject_Band = 5dB em 7Hz)
+// Teste dos Paramêtros do Filtro Butterworth (Frequência de Corte = 3.7Hz , Frequência de amostragem = 1000Hz , Amáx Pass_Band = 0.7dB , Amin Reject_Band = 5dB em 7Hz)
 
 float x[] = {0,0,0}; //vetores do sinal puro
 float y[] = {0,0,0};//vetores do sinal filtrado
