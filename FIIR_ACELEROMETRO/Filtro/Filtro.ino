@@ -6,17 +6,17 @@ float y[] = {0,0,0};//vetores do sinal filtrado
 int k = 0;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 }
 
 void loop() {
   // Test signal
   float t = micros()/1.0e6;
-  x[0] = sin(2*PI*5*t) + 0.5*sin(2*PI*50*t); //Sinal puro de 5Hz com interferência de 50Hz
+  x[0] = sin(2*PI*3*t) + 0.5*sin(2*PI*20*t); //Sinal puro de 5Hz com interferência de 50Hz
 
   
-  float b[] = {0.00018964, 0.00037928, 0.00018964};//coeficientes do numerador da função de transferência
-  float a[] = { 1.94958558, -0.95034414};//coeficientes do denominador da função de transferência
+  float b[] = {0.04902202, 0.09804405, 0.04902202};//coeficientes do numerador da função de transferência
+  float a[] = {  1.16211361, -0.3582017};//coeficientes do denominador da função de transferência
   
   y[0] = a[0]*y[1] + a[1]*y[2] +
                b[0]*x[0] + b[1]*x[1] + b[2]*x[2];//Sinal Filtrado
