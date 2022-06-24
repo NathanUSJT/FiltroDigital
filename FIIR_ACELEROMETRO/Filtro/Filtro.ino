@@ -15,8 +15,8 @@ void loop() {
   x[0] = sin(2*PI*3*t) + 0.5*sin(2*PI*20*t); //Sinal puro de 5Hz com interferência de 50Hz
 
   
-  float b[] = {0.04902202, 0.09804405, 0.04902202};//coeficientes do numerador da função de transferência
-  float a[] = {  1.16211361, -0.3582017};//coeficientes do denominador da função de transferência
+  float b[] = {0.00073978, 0.00147956, 0.00073978};//coeficientes do numerador da função de transferência
+  float a[] = { 1.90018891, -0.90314802};//coeficientes do denominador da função de transferência
   
   y[0] = a[0]*y[1] + a[1]*y[2] +
                b[0]*x[0] + b[1]*x[1] + b[2]*x[2];//Sinal Filtrado
