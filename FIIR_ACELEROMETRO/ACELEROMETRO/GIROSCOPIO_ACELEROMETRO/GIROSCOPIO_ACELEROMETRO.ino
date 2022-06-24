@@ -3,7 +3,7 @@
 //Endereço em hexadecimal do sensor MPU 6050
 const int ENDERECO_SENSOR=0x68;  
 
-int girX, girY, girZ, acelX, acelY, acelZ;
+int girX, girY, girZ, acelX, acelY, acelZ, temperatura;
 
 void setup()
 {
@@ -46,10 +46,10 @@ void loop()
   girY = Wire.read()<<8|Wire.read();  //0x45 (GYRO_YOUT_H) & 0x46 (GYRO_YOUT_L)
   girZ = Wire.read()<<8|Wire.read();  //0x47 (GYRO_ZOUT_H) & 0x48 (GYRO_ZOUT_L)
 
-  /*Printa o valor X do acelerômetro na serial
+  //Printa o valor X do acelerômetro na serial
   Serial.print("Acelerômetro X = "); 
-  Serial.print(acelX);
- 
+  Serial.println(acelX);
+ /*
   //Printa o valor Y do acelerômetro na serial
   Serial.print(" \tY = "); 
   Serial.print(acelY);
